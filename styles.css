@@ -1,0 +1,84 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+}
+
+* {
+    border: 0;
+    margin: 0;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+#game {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 480px;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 1em;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: white;  
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4em;
+    aspect-ratio: 1;
+    cursor: pointer;
+    color: #c68de2;
+    background-color: black;
+}
+
+.cell:not(:disabled):hover {
+    background-color: gray;
+    opacity: 0,4;
+}
+
+.cell:disabled {
+    cursor: not-allowed
+}
+
+.btn {
+    display: block;
+    border: none;
+    border-radius: 0.1em;
+    font: inherit;
+    font-size: 2.5em;
+    font-weight: bold;
+    width: 100%;
+    background-color: #ffdd00;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.winner {
+    background-color: greenyellow;
+    color: black;
+}
